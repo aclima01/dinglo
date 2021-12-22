@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+   <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetPlatformIdentifier>h5</TargetPlatformIdentifier>
+    <TargetPlatformVersion>3.1</TargetPlatformVersion>
+    <TargetLatestRuntimePatch>true</TargetLatestRuntimePatch>
+  </PropertyGroup>
+
+<PropertyGroup Condition=" '$(RunConfiguration)' == 'Dinglo.Api' " />
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugType>portable</DebugType>
+    <DebugType>portable</DebugType>
+  </PropertyGroup>
+  
+<ItemGroup>
+    <PackageReference Include="Flunt" Version="1.0.5" />
+    <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.9">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Newtonsoft" Version="5.6.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="5.6.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="5.6.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUi" Version="5.6.3" />
+</ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Dinglo.Domain\Dinglo.Domain.csproj" />
+    <ProjectReference Include="..\Dinglo.Infra\Dinglo.Infra.csproj" />
+  </ItemGroup>
+
+</Project>
